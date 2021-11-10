@@ -21,6 +21,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ apod.title }}</h5>
           <p class="card-text">{{ apod.date }}</p>
+          <button class="btn btn-success" @click="move(apod)">FAVORITE</button>
         </div>
       </div>
     </div>
@@ -45,6 +46,9 @@ export default {
         } catch (error) {
           logger.error(error);
         }
+      },
+      move(apod) {
+        apodService.move(apod);
       },
     };
   },

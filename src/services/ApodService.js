@@ -12,6 +12,10 @@ async getapod(date){
   logger.log(res.data) 
   AppState.apod = new Apod(res.data)
 }
+move(apod){
+  AppState.favorites.push(apod)
+  console.log(AppState.favorites)
+}
 }
 
 
