@@ -48,7 +48,9 @@ export default {
         }
       },
       move(apod) {
-        apodService.move(apod);
+        const favorite = { ...apod };
+        console.log(favorite);
+        apodService.move(favorite);
       },
     };
   },

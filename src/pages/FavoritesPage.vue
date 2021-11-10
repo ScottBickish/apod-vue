@@ -1,19 +1,15 @@
 <template>
   <div class="row container-fluid">
-    <FavoritesComponent v-for="(f, index) in favorites" :key="index" />
+    <FavoritesComponent />
   </div>
 </template>
 
 
 <script>
-import { computed } from "@vue/reactivity";
-import { AppState } from "../AppState";
 export default {
   name: "FavoritesPage",
   setup() {
-    return {
-      favorites: computed(() => AppState.favorites),
-    };
+    return {};
   },
 };
 </script>
